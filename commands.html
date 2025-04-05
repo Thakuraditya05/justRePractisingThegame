@@ -1,0 +1,129 @@
+
+git init
+
+git clone <repository-url></repository-url>
+
+git add index.html  went to stagging area 
+git commit -m "first commit"   went to local repository
+git status  check the status of the repository
+git log  check the history of the repository
+touch about.html  create a file in the repository
+touch contcac.html  create a file in the repository
+git status check the status of the repository
+git add -A add all the files in the repository to the stagging area
+git commit -m "added about and contact page"  went to local repository
+git status check the status of the repository
+"staging area" ka mtlab hai ki jab hum koi file ko edit krte hain to wo file staging area me chali jati hai aur jab hum us file ko commit karte hain to wo file local repository me chali jati hai.
+
+<!-- stagging area is like ki photo kichwane ke liye khade hona 
+commit is like ki photo khich jana  -->
+
+sir ne kuch kuch add kiya hai aur kuch kuch delete kiya hai about.html file me
+git status check the status of the repository
+git add -A add all the files in the repository to the stagging area
+git commit -m "added about and contact page"  went to local repository
+git status check the status of the repository
+
+
+<!-- let by mistake maine puri file clear kr di hai and but uske pahle tk ke changes maine commit kr diya tha to dubara wahi se start krke ke liye we use  -->
+git checkout -- <file-name>  to get the file back to the last commit
+git checkout about.html  to get the file back to the last commit
+git checkout -f  to get the file back to the last commit forcefully
+git status check the status of the repository
+
+<!-- last ki saari commit ko dekhne ke liye we  -->
+git log  check the history of the repository
+git log -p -5 check the history of the repository with last 5 commi
+
+
+<!-- agar staging area and last commit se saaf saaf cheezo ko compre krna hai na to we use -->
+git diff  "working tree compared hoti hai stagging area se "
+git status " will again add up to commit files "
+git diff --staged " to compare last stagging rea to last commit  "
+
+<!-- went to last commit stages -->
+git checkout -f "agar last stag commit pr pahuchna hai"
+
+<!--  -->
+git commit -a -m "added about and contact page and skipped staging area and fixed "  went to local repository
+git status check the status of the repository
+git log  check the history of the repository
+
+git status check the status of the repository
+ls -a  check the status of the repository
+
+<!-- to remaove the file  -->
+git rm <file-name>  to remove the file from the repository  from working tree and stagging area
+git rm --cached <file-name>  to remove the file from the repository  from stagging area only and only 
+git status check the status of the repository
+git commit -a -m "removed the file from the repository"  went to local repository
+git log -p -2 check the history of the repository with last 2 commit
+
+<!-- summary lene ke liye ki abhi tk is main directory me kya kuch ho chuka hai uske liye just type  -->
+git status -s "summary of the directory"
+git status -sb "summary of the directory with branch name"
+git status -sb -uno "summary of the directory with branch name and untracked files only"
+
+
+<!-- un taraking wali file ko git ignored me likhta hai bs yahi important hai  -->
+.gitignore " to ignore the file from the repository and stagging area "
+git status check the status of the repository
+
+
+<!-- agar track krwna stop krwana hai to  -->
+git rm --cached logs/mylogs.log  to remove the file from the repository  from stagging area only and only
+
+
+
+
+
+<!-- ab branch hai ke bare me krne wale  -->
+master branch is the main branch of the repository
+git branch  " to check the branches in the repository "
+git branch features1 " to create a new branch in the repository "
+git branch -d features1 " to delete the branch in the repository "
+git branch chekout features1 " to switch to the branch in the repository "
+
+
+<!-- ab iss condition me hmm dusari branch me aagye hai orr  -->
+git commet -m "added the new feature in the branch"  went to local repository
+git status check the status of the repository
+
+git checkout master " to switch to the master branch in the repository "
+git checkout feature1 " to switch to the feature1 branch in the repository "
+''' add some changes in the feature1 branch  '''
+git log -p -2 check the history of the repository with last 2 commit
+
+
+git merge feature1 " to merge the feature1 branch in the master branch "
+git status check the status of the repository
+
+
+
+
+<!--  -->
+git branch
+git checkout -b feature1 " to create a new branch in the repository and switch to it "
+
+
+
+
+
+<!-- intervation git with github  -->
+adding locals to remote repository
+git remote add origin <repository-url>  " to add the remote repository to the local repository "
+git remote """ to check the remote repository in the local repository "
+git remote -v """ to check the remote repository in the local repository with url i,e push annd pull url "
+<!-- push krdo hamre origin  waha pr  master branch ko  -->
+git push origin main 
+
+setting --> ssh and gpg keys --->
+
+git push -u origin main  " to push the local repository to the remote repository "
+
+iss case me agar hamne koi branch create ki hai to usko bhi push karne ke liye  -->
+git push -u origin <branch-name>  " to push the local repository to the remote repository "
+git push -u origin feature1  " to push the local repository to the remote repository "
+
+
+

@@ -1,0 +1,28 @@
+# mylogs.log file will be ignored
+mylogs.log 
+
+
+# Ignore all .log files
+*.log
+
+# Ignore all .tmp files
+*.tmp
+
+# Ignore all .log files any directry
+**/*.log
+
+
+// Ignore all .tmp files any directry
+**/*.tmp
+
+# Ignore all mylogs.log files in the current directory only  jaha git banaya hai
+/mylogs.log
+
+
+# Ignore all *.cpp files in the current directory only 
+# and not in any subdirectories
+*.cpp 
+
+# agar kisi folder ko ignored krana hai to uska naam likhna hoga
+# Ignore all files in the "temp" directory i.e to ignored temp folder
+temp/
